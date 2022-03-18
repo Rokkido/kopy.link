@@ -1,0 +1,119 @@
+@import '_vars'
+
+// Font weight helper
+// 100 - Thin (Hairline)
+// 200 - Extra Light (Ultra Light)
+// 300 - Light
+// 400 - Normal
+// 500 - Medium
+// 600 - Semi Bold (Demi Bold)
+// 700 - Bold
+// 800 - Extra Bold (Ultra Bold)
+// 900 - Black (Heavy)
+
+// Font Family (only ttf)
++ff("OpenSans", "OpenSans-Regular", 400)
++ff("OpenSans", "OpenSans-Bold", bold)
+
+
+// Base
+*,
+*::before,
+*::after
+	box-sizing: border-box
+	outline: none
+
+::selection
+	color: #fff
+	background-color: $accent
+
+::placeholder
+	color: #666
+
+h1, h2, h3, h4, h5, h6, p, ul, button
+	margin: 0
+	padding: 0
+
+input, textarea
+	display: block
+	width: 100%
+
+textarea
+	resize: none
+
+button
+	border: none
+	background-color: transparent
+	cursor: pointer
+	color: inherit
+
+a
+	color: inherit
+	text-decoration: none
+
+li
+	list-style-type: none
+
+html
+	background-color: #fff
+
+body
+	position: relative
+	overflow-x: hidden
+	min-width: 320px
+	font-size: $fontSize
+	line-height: $lineHeight
+	color: $textColor
+	font-family: $font
+	font-weight: $fontWeight
+	letter-spacing: .05em
+
+.flex
+	display: flex
+	flex-wrap: wrap
+
+.grid
+	display: grid
+
+.btn
+	text-decoration: none
+	border: none
+	padding: 0
+	background-color: transparent
+	color: inherit
+	cursor: pointer
+	display: inline-grid
+	grid-auto-flow: column
+	grid-gap: 10px
+	justify-content: center
+	align-items: center
+	width: 100%
+	transition: .25s
+
+	font-size: 18px
+	height: 50px
+	padding: 0 20px
+	color: #fff
+	background-color: $accent
+	border-radius: 100px
+	letter-spacing: inherit
+	&:hover
+		background-color: lighten($accent, 5%)
+	img
+		width: 22px
+		&.done
+			display: none
+	&.done
+		span, img:not(.done)
+			display: none
+		img.done
+			display: block
+			animation: done .25s
+			width: 24px
+
+
+@keyframes done
+	0%
+		+scale(0)
+	100%
+		+move(1)
