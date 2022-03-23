@@ -9,12 +9,12 @@
 		title: {
 			en: 'Copy text from URL',
 			uk: 'Копіювати текст із URL',
-			ru: 'Скопировать текст из URL'
+			ru: 'Копировать текст из URL'
 		},
 		copy: {
 			en: 'Copy',
 			uk: 'Копіювати',
-			ru: 'Скопировать'
+			ru: 'Копировать'
 		},
 		copied: {
 			en: 'Copied!',
