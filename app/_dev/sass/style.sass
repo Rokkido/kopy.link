@@ -6,26 +6,48 @@
 main
 	padding: 50px 15px
 
+.notify
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background-color: $blueM
+	text-align: center
+	color: #fff
+	padding: 5px
+	font-size: 14px
+	line-height: 1
+	transition: 0.25s
+	&:not(.active)
+		+move(0, -100%)
+
 .section
 	text-align: center
-	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1), 0px 10px 24px rgba(44, 39, 56, 0.08), 0px 15px 48px rgba(44, 39, 56, 0.02)
-	max-width: 380px
+	box-shadow: $shadow
+	background-color: #fff
+	max-width: 420px
 	margin: 0 auto
-	padding: 40px 30px
-	border-radius: 35px
+	padding: 30px 25px
+	border-radius: $radius
+	+dark
+		background-color: #18181e
 	h1
 		line-height: 1
-		font-size: 32px
+		font-size: 24px
 	.input-wrap
-		margin: 30px 0 15px
+		margin: 20px 0 10px
 		input
 			display: block
-			height: 50px
+			height: $height
 			border: 1px solid $gray
 			padding: 10px 20px
-			border-radius: 100px
-			font-size: 18px
+			border-radius: $radius
 			text-align: center
+			background-color: #fdfdfd
+			color: inherit
+			+dark
+				background-color: #202028
+				border-color: #333340
 
 
 

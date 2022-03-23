@@ -1,16 +1,18 @@
 extends ./components/_layout.pug
 
 block vars
-	- const pageTitle = 'Copy Text from URL - kopy.link'
+	- const pageTitle = 'Copy text from URL | kopy.link'
 	- const pageClass = ''
 	- const lang = 'en'
 
 block content_block
+	.notify.js-notify(data-lang="copied") Copied!
+
 	section.section
-		h1 Copy Text
+		h1(data-lang="title") Copy text from URL
 		.input-wrap
 			input.js-input(type="text" value="" readonly)
 		button.btn.js-button(data-copy="")
-			span Copy
-			img(src="./img/ic-copy.svg", alt="")
+			span(data-lang="copy") Copy
+			//- img.copy(src="./img/ic-copy.svg", alt="")
 			img.done(src="./img/ic-done.svg", alt="")

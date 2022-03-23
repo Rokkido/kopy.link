@@ -44,7 +44,7 @@ AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml appl
 
 </ifModule>
 
-
+AddDefaultCharset UTF-8
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

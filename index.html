@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Copy Text</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<h1></h1>
+		<button data-copy="">Copy</button>
+
+		<script src="https://code.jquery.com/jquery-git.js"></script>
+
+		<script>
+			const copyText = window.location.hash.slice(1);
+			$('h1').text(copyText);
+			$('button').attr('data-copy', copyText);
+
+			$('[data-copy]').click(function(){
+			var value = $(this).attr('data-copy');
+			console.log(value);
+
+			var textarea = $('<textarea/>');
+			textarea.css({'position': 'fixed', 'top': '-999px', 'left': '-999px'});
+
+			textarea.val(value);
+
+			$('body').append(textarea);
+
+			textarea.select();
+			document.execCommand('copy');
+
+			textarea.remove();
+			});
+		</script>
+	</body>
+</html>

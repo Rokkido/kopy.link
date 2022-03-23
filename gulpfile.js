@@ -108,7 +108,7 @@ gulp.task('favicon', function(done) {
 				},
 				windows: {
 					pictureAspect: 'noChange',
-					backgroundColor: '#666f86',
+					backgroundColor: '#2474eb',
 					onConflict: 'override',
 					assets: {
 						windows80Ie10Tile: false,
@@ -124,7 +124,7 @@ gulp.task('favicon', function(done) {
 					pictureAspect: 'noChange',
 					themeColor: '#ffffff',
 					manifest: {
-						name: 'Sitename',
+						name: 'kopy.link',
 						display: 'standalone',
 						orientation: 'notSet',
 						onConflict: 'override',
@@ -138,7 +138,7 @@ gulp.task('favicon', function(done) {
 				safariPinnedTab: {
 					pictureAspect: 'blackAndWhite',
 					threshold: 75,
-					themeColor: '#666f86'
+					themeColor: '#2474eb'
 				}
 			},
 			settings: {
