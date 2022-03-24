@@ -1,15 +1,27 @@
 ;document.addEventListener('DOMContentLoaded', () => {
 	let userLang = navigator.language;
+	let copyText;
+	
+	const $html   = document.querySelector('html');
+	const $body   = document.querySelector('body');
+	const $input  = document.querySelector('.js-input');
+	const $button = document.querySelector('.js-button');
+	const $notify = document.querySelector('.js-notify');
 
-	if ( userLang != 'uk' && userLang != 'ru' ) {
+	// lang
+	if ( userLang.search('uk') != -1 ) {
+		userLang = 'uk';
+	} else if ( userLang.search('ru') != -1 ) {
+		userLang = 'ru';
+	} else {
 		userLang = 'en';
 	}
 
 	const langText = {
 		title: {
-			en: 'Copy text from URL',
-			uk: 'Копіювати текст із URL',
-			ru: 'Копировать текст из URL'
+			en: 'Copy text',
+			uk: 'Копіювати текст',
+			ru: 'Копировать текст'
 		},
 		copy: {
 			en: 'Copy',
@@ -23,6 +35,8 @@
 		}
 	}
 
+	$html.setAttribute('lang', userLang);
+
 	const $langEls = document.querySelectorAll('[data-lang]');
 
 	$langEls.forEach(function($el){
@@ -35,14 +49,6 @@
 		}
 
 	});
-
-	// app
-	let copyText;
-	const $body   = document.querySelector('body');
-	const $input  = document.querySelector('.js-input');
-	const $button = document.querySelector('.js-button');
-
-	const $notify = document.querySelector('.js-notify');
 
 	function init(){
 		copyText = location.href.replace(location.origin + '/', '');
