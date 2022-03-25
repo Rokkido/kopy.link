@@ -70,7 +70,7 @@
 		}
 
 		if ( copyText == '' ) {
-			copyText = langText.textHere[userLang];
+			copyText = 'kopy.link/' + langText.textHere[userLang];
 		}
 
 		$input.value = copyText;
