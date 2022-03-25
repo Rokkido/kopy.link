@@ -4,7 +4,14 @@
 @import 'components/_vars'
 
 main
-	padding: 50px 15px
+	height: 100%
+	padding: 50px 15px 15px
+	display: flex
+	flex-direction: column
+	overflow-x: hidden
+	overflow: auto
+	height: 100%
+	
 
 .notify
 	position: fixed
@@ -25,6 +32,7 @@ main
 	text-align: center
 	box-shadow: $shadow
 	background-color: #fff
+	width: 100%
 	max-width: 420px
 	margin: 0 auto
 	padding: 35px 25px
@@ -50,6 +58,15 @@ main
 				border-color: #333340
 
 
-
-
+.bottom-text
+	text-align: center
+	width: 100%
+	max-width: 420px
+	margin: 0 auto
+	border-radius: $radius
+	padding-top: 15px
+	margin-top: auto
+	p
+		font-size: 14px
+		color: #979797
 

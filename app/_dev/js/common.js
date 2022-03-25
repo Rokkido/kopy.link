@@ -32,6 +32,16 @@
 			en: 'Copied!',
 			uk: 'Скопійовано!',
 			ru: 'Скопировано!'
+		},
+		createLink: {
+			en: 'Create link: ',
+			uk: 'Створіть посилання: ',
+			ru: 'Создать ссылку: '
+		},
+		textHere: {
+			en: 'your text here',
+			uk: 'ваш текст',
+			ru: 'ваш текст'
 		}
 	}
 
@@ -60,7 +70,7 @@
 		}
 
 		if ( copyText == '' ) {
-			copyText = 'kopy.link/your text here'
+			copyText = langText.textHere[userLang];
 		}
 
 		$input.value = copyText;
@@ -86,5 +96,15 @@
 
 	// onload
 	$body.classList.remove('hidden');
+
+
+	// fix mob 100vh
+	window.addEventListener('resize', heightFix);
+
+	function heightFix(){
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}
+	heightFix();
 
 });
